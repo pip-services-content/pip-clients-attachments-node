@@ -7,11 +7,11 @@ import { DataPage } from 'pip-services-commons-node';
 import { DirectClient } from 'pip-services-net-node';
 
 import { IAttachmentsClientV1 } from './IAttachmentsClientV1';
-import { IAttachmentsBusinessLogic } from 'pip-services-attachments-node';
+//import { IAttachmentsBusinessLogic } from 'pip-services-attachments-node';
 import { ReferenceV1 } from './ReferenceV1';
 import { AttachmentV1 } from './AttachmentV1';
 
-export class AttachmentsDirectClientV1 extends DirectClient<IAttachmentsBusinessLogic> implements IAttachmentsClientV1 {
+export class AttachmentsDirectClientV1 extends DirectClient<any> implements IAttachmentsClientV1 {
             
     public constructor(config?: any) {
         super();
