@@ -2,7 +2,7 @@ let _ = require('lodash');
 let async = require('async');
 let assert = require('chai').assert;
 
-import { AttachmentV1 } from '../../src/version1/AttachmentV1';
+import { BlobAttachmentV1 } from '../../src/version1/BlobAttachmentV1';
 import { ReferenceV1 } from '../../src/version1/ReferenceV1';
 import { IAttachmentsClientV1 } from '../../src/version1/IAttachmentsClientV1';
 

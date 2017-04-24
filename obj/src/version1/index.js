@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var ReferenceV1_1 = require("./ReferenceV1");
 exports.ReferenceV1 = ReferenceV1_1.ReferenceV1;
-var AttachmentV1_1 = require("./AttachmentV1");
-exports.AttachmentV1 = AttachmentV1_1.AttachmentV1;
+var BlobAttachmentV1_1 = require("./BlobAttachmentV1");
+exports.BlobAttachmentV1 = BlobAttachmentV1_1.BlobAttachmentV1;
 var AttachmentsHttpClientV1_1 = require("./AttachmentsHttpClientV1");
 exports.AttachmentsHttpClientV1 = AttachmentsHttpClientV1_1.AttachmentsHttpClientV1;
 var AttachmentsLambdaClientV1_1 = require("./AttachmentsLambdaClientV1");

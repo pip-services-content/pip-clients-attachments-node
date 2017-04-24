@@ -1,2 +1,2 @@
 export * from './version1';
-export { AttachmentsFactory } from './build/AttachmentsFactory';
+export { AttachmentsClientFactory } from './build/AttachmentsClientFactory';

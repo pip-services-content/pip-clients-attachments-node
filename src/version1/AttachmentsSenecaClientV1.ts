@@ -6,7 +6,7 @@ import { DataPage } from 'pip-services-commons-node';
 import { CommandableSenecaClient } from 'pip-services-net-node';
 
 import { ReferenceV1 } from './ReferenceV1';
-import { AttachmentV1 } from './AttachmentV1';
+import { BlobAttachmentV1 } from './BlobAttachmentV1';
 import { IAttachmentsClientV1 } from './IAttachmentsClientV1';
 
 export class AttachmentsSenecaClientV1 extends CommandableSenecaClient implements IAttachmentsClientV1 {
@@ -19,7 +19,7 @@ export class AttachmentsSenecaClientV1 extends CommandableSenecaClient implement
     }
         
     public getAttachmentById(correlationId: string, id: string,
-        callback: (err: any, attachments: AttachmentV1) => void): void {
+        callback: (err: any, attachments: BlobAttachmentV1) => void): void {
         this.callCommand(
             'get_attachment_by_id',
             correlationId,
@@ -31,7 +31,7 @@ export class AttachmentsSenecaClientV1 extends CommandableSenecaClient implement
     }
     
     public addAttachments(correlationId: string, reference: ReferenceV1, ids: string[],
-        callback?: (err: any, attachments: AttachmentV1[]) => void): void {
+        callback?: (err: any, attachments: BlobAttachmentV1[]) => void): void {
         this.callCommand(
             'add_attachments',
             correlationId,
@@ -44,7 +44,7 @@ export class AttachmentsSenecaClientV1 extends CommandableSenecaClient implement
     }
 
     public updateAttachments(correlationId: string, reference: ReferenceV1, oldIds: string[], newIds: string[],
-        callback?: (err: any, attachments: AttachmentV1[]) => void): void {
+        callback?: (err: any, attachments: BlobAttachmentV1[]) => void): void {
         this.callCommand(
             'update_attachments',
             correlationId,
@@ -58,7 +58,7 @@ export class AttachmentsSenecaClientV1 extends CommandableSenecaClient implement
     }
 
     public removeAttachments(correlationId: string, reference: ReferenceV1, ids: string[],
-        callback?: (err: any, attachments: AttachmentV1[]) => void): void {
+        callback?: (err: any, attachments: BlobAttachmentV1[]) => void): void {
         this.callCommand(
             'remove_attachments',
             correlationId,
@@ -71,7 +71,7 @@ export class AttachmentsSenecaClientV1 extends CommandableSenecaClient implement
     }
 
     public deleteAttachmentById(correlationId: string, id: string,
-        callback?: (err: any, attachments: AttachmentV1) => void): void {
+        callback?: (err: any, attachments: BlobAttachmentV1) => void): void {
         this.callCommand(
             'delete_attachment_by_id',
             correlationId,

@@ -6,7 +6,7 @@ import { AttachmentsDirectClientV1 } from '../version1/AttachmentsDirectClientV1
 import { AttachmentsHttpClientV1 } from '../version1/AttachmentsHttpClientV1';
 import { AttachmentsSenecaClientV1 } from '../version1/AttachmentsSenecaClientV1';
 
-export class AttachmentsFactory extends Factory {
+export class AttachmentsClientFactory extends Factory {
 	public static Descriptor: Descriptor = new Descriptor('pip-services-attachments', 'factory', 'default', 'default', '1.0');
 	public static NullClientV1Descriptor = new Descriptor('pip-services-attachments', 'client', 'null', 'default', '1.0');
 	public static DirectClientV1Descriptor = new Descriptor('pip-services-attachments', 'client', 'direct', 'default', '1.0');
@@ -16,10 +16,10 @@ export class AttachmentsFactory extends Factory {
 	constructor() {
 		super();
 
-		this.registerAsType(AttachmentsFactory.NullClientV1Descriptor, AttachmentsNullClientV1);
-		this.registerAsType(AttachmentsFactory.DirectClientV1Descriptor, AttachmentsDirectClientV1);
-		this.registerAsType(AttachmentsFactory.HttpClientV1Descriptor, AttachmentsHttpClientV1);
-		this.registerAsType(AttachmentsFactory.SenecaClientV1Descriptor, AttachmentsSenecaClientV1);
+		this.registerAsType(AttachmentsClientFactory.NullClientV1Descriptor, AttachmentsNullClientV1);
+		this.registerAsType(AttachmentsClientFactory.DirectClientV1Descriptor, AttachmentsDirectClientV1);
+		this.registerAsType(AttachmentsClientFactory.HttpClientV1Descriptor, AttachmentsHttpClientV1);
+		this.registerAsType(AttachmentsClientFactory.SenecaClientV1Descriptor, AttachmentsSenecaClientV1);
 	}
 	
 }

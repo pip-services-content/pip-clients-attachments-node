@@ -9,7 +9,7 @@ import { DirectClient } from 'pip-services-net-node';
 import { IAttachmentsClientV1 } from './IAttachmentsClientV1';
 //import { IAttachmentsController } from 'pip-services-attachments-node';
 import { ReferenceV1 } from './ReferenceV1';
-import { AttachmentV1 } from './AttachmentV1';
+import { BlobAttachmentV1 } from './BlobAttachmentV1';
 
 export class AttachmentsDirectClientV1 extends DirectClient<any> implements IAttachmentsClientV1 {
             
@@ -22,7 +22,7 @@ export class AttachmentsDirectClientV1 extends DirectClient<any> implements IAtt
     }
 
     public getAttachmentById(correlationId: string, id: string,
-        callback: (err: any, attachments: AttachmentV1) => void): void {
+        callback: (err: any, attachments: BlobAttachmentV1) => void): void {
         let timing = this.instrument(correlationId, 'attachments.get_attachment_by_id');
         this._controller.getAttachmentById(correlationId, id, (err, attachment) => {
             timing.endTiming();
@@ -31,7 +31,7 @@ export class AttachmentsDirectClientV1 extends DirectClient<any> implements IAtt
     }
     
     public addAttachments(correlationId: string, reference: ReferenceV1, ids: string[],
-        callback?: (err: any, attachments: AttachmentV1[]) => void): void {
+        callback?: (err: any, attachments: BlobAttachmentV1[]) => void): void {
         let timing = this.instrument(correlationId, 'attachments.add_attachments');
         this._controller.addAttachments(correlationId, reference, ids, (err, attachments) => {
             timing.endTiming();
@@ -40,7 +40,7 @@ export class AttachmentsDirectClientV1 extends DirectClient<any> implements IAtt
     }
 
     public updateAttachments(correlationId: string, reference: ReferenceV1, oldIds: string[], newIds: string[],
-        callback?: (err: any, attachments: AttachmentV1[]) => void): void {
+        callback?: (err: any, attachments: BlobAttachmentV1[]) => void): void {
         let timing = this.instrument(correlationId, 'attachments.update_attachments');
         this._controller.updateAttachments(correlationId, reference, oldIds, newIds, (err, attachments) => {
             timing.endTiming();
@@ -49,7 +49,7 @@ export class AttachmentsDirectClientV1 extends DirectClient<any> implements IAtt
     }
 
     public removeAttachments(correlationId: string, reference: ReferenceV1, ids: string[],
-        callback?: (err: any, attachments: AttachmentV1[]) => void): void {
+        callback?: (err: any, attachments: BlobAttachmentV1[]) => void): void {
         let timing = this.instrument(correlationId, 'attachments.remove_attachments');
         this._controller.removeAttachments(correlationId, reference, ids, (err, attachment) => {
             timing.endTiming();
@@ -58,7 +58,7 @@ export class AttachmentsDirectClientV1 extends DirectClient<any> implements IAtt
     }
 
     public deleteAttachmentById(correlationId: string, id: string,
-        callback?: (err: any, attachments: AttachmentV1) => void): void {
+        callback?: (err: any, attachments: BlobAttachmentV1) => void): void {
         let timing = this.instrument(correlationId, 'attachments.delete_attachment_by_id');
         this._controller.deleteAttachmentById(correlationId, id, (err, attachment) => {
             timing.endTiming();
