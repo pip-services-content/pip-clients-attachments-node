@@ -12,7 +12,7 @@ import { IAttachmentsClientV1 } from './IAttachmentsClientV1';
 export class AttachmentsHttpClientV1 extends CommandableHttpClient implements IAttachmentsClientV1 {
 
     constructor(config?: any) {
-        super('attachments');
+        super('v1/attachments');
 
         if (config != null)
             this.configure(ConfigParams.fromValue(config));
