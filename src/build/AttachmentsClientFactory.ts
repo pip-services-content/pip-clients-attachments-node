@@ -1,5 +1,5 @@
 import { Descriptor } from 'pip-services-commons-node';
-import { Factory } from 'pip-services-commons-node';
+import { Factory } from 'pip-services-components-node';
 
 import { AttachmentsNullClientV1 } from '../version1/AttachmentsNullClientV1';
 import { AttachmentsDirectClientV1 } from '../version1/AttachmentsDirectClientV1';

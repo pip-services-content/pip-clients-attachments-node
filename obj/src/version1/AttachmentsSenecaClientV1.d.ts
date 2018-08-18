@@ -1,4 +1,4 @@
-import { CommandableSenecaClient } from 'pip-services-net-node';
+import { CommandableSenecaClient } from 'pip-services-seneca-node';
 import { ReferenceV1 } from './ReferenceV1';
 import { BlobAttachmentV1 } from './BlobAttachmentV1';
 import { IAttachmentsClientV1 } from './IAttachmentsClientV1';

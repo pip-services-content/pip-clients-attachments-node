@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_commons_node_2 = require("pip-services-commons-node");
+const pip_services_components_node_1 = require("pip-services-components-node");
 const AttachmentsNullClientV1_1 = require("../version1/AttachmentsNullClientV1");
 const AttachmentsDirectClientV1_1 = require("../version1/AttachmentsDirectClientV1");
 const AttachmentsHttpClientV1_1 = require("../version1/AttachmentsHttpClientV1");
 const AttachmentsSenecaClientV1_1 = require("../version1/AttachmentsSenecaClientV1");
-class AttachmentsClientFactory extends pip_services_commons_node_2.Factory {
+class AttachmentsClientFactory extends pip_services_components_node_1.Factory {
     constructor() {
         super();
         this.registerAsType(AttachmentsClientFactory.NullClientV1Descriptor, AttachmentsNullClientV1_1.AttachmentsNullClientV1);
