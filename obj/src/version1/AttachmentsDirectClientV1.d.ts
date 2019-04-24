@@ -1,4 +1,4 @@
-import { DirectClient } from 'pip-services-rpc-node';
+import { DirectClient } from 'pip-services3-rpc-node';
 import { IAttachmentsClientV1 } from './IAttachmentsClientV1';
 import { ReferenceV1 } from './ReferenceV1';
 import { BlobAttachmentV1 } from './BlobAttachmentV1';

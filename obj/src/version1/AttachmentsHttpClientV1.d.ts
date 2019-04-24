@@ -1,4 +1,4 @@
-import { CommandableHttpClient } from 'pip-services-rpc-node';
+import { CommandableHttpClient } from 'pip-services3-rpc-node';
 import { ReferenceV1 } from './ReferenceV1';
 import { BlobAttachmentV1 } from './BlobAttachmentV1';
 import { IAttachmentsClientV1 } from './IAttachmentsClientV1';
