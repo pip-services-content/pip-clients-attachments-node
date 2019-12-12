@@ -13,9 +13,9 @@ class AttachmentsClientFactory extends pip_services3_components_node_1.Factory {
         this.registerAsType(AttachmentsClientFactory.HttpClientV1Descriptor, AttachmentsHttpClientV1_1.AttachmentsHttpClientV1);
     }
 }
+exports.AttachmentsClientFactory = AttachmentsClientFactory;
 AttachmentsClientFactory.Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-attachments', 'factory', 'default', 'default', '1.0');
 AttachmentsClientFactory.NullClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-attachments', 'client', 'null', 'default', '1.0');
 AttachmentsClientFactory.DirectClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-attachments', 'client', 'direct', 'default', '1.0');
 AttachmentsClientFactory.HttpClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-attachments', 'client', 'http', 'default', '1.0');
-exports.AttachmentsClientFactory = AttachmentsClientFactory;
 //# sourceMappingURL=AttachmentsClientFactory.js.map
